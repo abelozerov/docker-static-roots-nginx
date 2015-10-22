@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Compiling static site if required
-if [ -d "/temp/src" ]; then
-	echo "docker-static-roots-nginx: Static site source code found in /temp/etc"
+if [ -f "/temp/src/package.json" ]; then
+	echo "docker-static-roots-nginx: Static site source code found in /temp/src"
 
 	cd /temp/src;
 	if [ ! -d "/temp/src/public" ]; then
